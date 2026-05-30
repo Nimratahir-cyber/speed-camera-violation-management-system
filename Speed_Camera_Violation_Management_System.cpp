@@ -214,7 +214,9 @@ void Calculate_unpaid_fine()
     int total=0;
     for(int i=0;i<vehicles.size();i++)
     {
+        if(vehicles[i].fine_status=="unpaid"){
         total+=vehicles[i].fine;
+        }
     }
     cout<<"the total unpaid fine is: "<<total<<endl;
     getch();
